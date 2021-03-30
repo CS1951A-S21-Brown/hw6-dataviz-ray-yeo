@@ -13,15 +13,109 @@
         <h3>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h3>
     </div>
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
+    <h4>
+        Dashboard addresses questions regarding titles listed on Netflix.
+    </h4>
     <div class="row">
         <div class="col-lg-6">
-            <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <div id="graph1">
+                <h3>Graph 1</h1>
+            </div>
+            <div id="graph2">     
+                <h3>Graph 2</h1>       
+                <p>
+                Graph depicts movies from 1975 onward. Years prior to this have inconsistent data information. Hover over the graph to show the exact average runtime!
+                </p>
+            </div>
+
+            <br/>
         </div>
         <div class="col-lg-6">
-            <div id="graph3"></div>
+            <div id="graph3">
+                <h3>Graph 3</h1>
+                    <button type="button" class="btn btn-outline-warning" onclick="setData(10)">Top 10 Pairs</button>
+                    <button type="button" class="btn btn-outline-warning" onclick="setData(20)">Top 20 Pairs</button>
+                    <button type="button" class="btn btn-outline-warning" onclick="setData(30)">Top 30 Pairs</button>
+            </div>
+
         </div>
     </div>
+
+    <h3>Written Questions</h3>
+    <div>
+        <p>
+            Graph 1 depicts the number of titles per genre. A bargraph achieves this successfully because it enables the viewer
+            to compare both numerically and visually the count differences between genres. The genres are sorted based on 
+            their count, so that the viewer can easily discern which genre is at the top.
+        </p>
+        <p>
+            Graph 2 shows the average runtime of movies based on the year they were released. The graph only contains
+            years after 1975, which was an intentional decision. The reason being is that not all years prior have movies
+            released. This led to gaps in the graph, but starting from 1975 fixed that. The y-axis is sorted 
+            chronologically, which is intuitive for showing continuity and trends over time. Hovering over a particular
+            bar shows the exact average runtime in decimal form; the solid counts are in integer form because they
+            are more visually appealing in that manner.
+        </p>
+        <p>
+            Graph 3 illustrates the top actor and director pairs. Once again, a bar graph achieves this quite well.
+            The word "top" is quite subjective, so the graph is accompanied with three buttons that give the 
+            viewer the ability to toggle between the number of pairs that appear on the graph. 
+        </p>
+        <p>
+            D3 was helpful in that...
+            <br>
+            1. The scaling for domain and range was very helpful. It organized and spaced things out 
+            in an aesthetic manner; all I had to do was feed it the min and max values.
+            <br>
+            2. It worked very seamlessly/intuitively with my HTML and CSS files. D3 made it easy to format 
+            and also apply my own CSS styling.
+            <br>
+            3. Features enhance one another. Once an intial graph is made, it doesn't take that much more 
+            effort to add additional features like toolkits, interactive components, and color.
+        </p>
+        <p>
+            D3 was not the best for...
+            <br>
+            1. Working with unparsed and uncleaned data. Working with vanilla JavaScript to clean and parse
+            data was challenging.
+            <br>
+            2. Beginners. D3 isn't the most intuitive at first, and the function names can be a bit misleading. Terms such as 
+            "merge", "bandwith", "scaleLinear", "scaleOrdinal", etc. don't make any sense without context. Only through trial and error
+            and playing around with values for extended periods of time can one begin to understand what each function targets.
+            <br>
+            3. Trying out new things. The documentation online was really poor; without the lab's guidance I would not have
+            been able to complete this assignment. For example, the D3 website said that the tutorial page was a work in progress.
+        </p>
+        <p>
+            Accessibility
+            <br>
+            My dashboard is fairly accessible, but there is always room for improvement. By using colorblind friendly colors,
+            the users can see a visually appealing graph. This helps address the issue of equivalent experience that was mentioned
+            in "Why Accessibility Is at the Heart of Data Visualization". Additionally, by including counts at the end of each bar, 
+            users don't need to guess the value. I also tried to organize things by color. While color does not play a role within my 
+            bar graphs (there is no need to confuse the viewer with unecessary differences between colors), it can serve as a way to
+            break the graphs up into their own categories. Looking at my dashboard, it is very clear which graph + its contents belong
+            to which category and answer.
+            <br>
+            My dashboard could improve upon a couple things. First and foremost, I would argue that graphs 1 and 2 
+            suffer from information overload. There is a lot of data packed into them, which makes the text, bars, and counts
+            very small. Additionally, the graph scaling is a bit off. As all three are bar graphs, it is a bit unnatural to see
+            bars of different sizes in different parts of the page. I understand that this can be a bit confusing and misleading to the audience.
+        </p>
+        <p>
+            Reflection
+            <br>
+            A component missing from my dashboard is attention toward the visually impaired. Something that would have helped in this aspect
+            would have been specific text that describes the findings of each graph, as done in "A Comprehensive Guide to Accessible Data Visualization".
+            Such text would be picked up by a screenreader, and therefore enable the visually impaired to learn from my dashboard. I was unable to achieve
+            this due to a lack of time, as this is midterms season. If I did have more time and knowledge about D3, I would have incorporated this from the 
+            get-go. Alongside this, I could have provided more information on graphs by using the hover over feature.
+            Readings from "Why Accessibility Is at the Heart of Data Visualization" also indicate that SVG markup could be used to allow users to tab through each data point. This is something that I am not familiar with, which prevented me 
+            from incorporating it into my dashboard. However, it does seem like a very valuable thing to learn if I do end up creating more graphs in the future.
+        </p>
+
+    </div>
+
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
 </body>

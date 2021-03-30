@@ -1,12 +1,53 @@
 .header {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.header > h3, h5 {
-    margin: 0;
-    padding-top: 20px;
-    text-align: center;
+.header > h3,
+h5 {
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
 }
 
 /* Include any custom CSS styling here! */
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 5em;
+  margin-right: 1em;
+  background-color: orange;
+}
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 10em;
+  margin-right: 1em;
+}
+button:focus {
+  outline: 0 !important;
+}
+svg {
+  display: block;
+  margin: 0 auto;
+  font: 10px sans-serif;
+}
+.tooltip {
+  position: absolute;
+  background-color: white;
+  font-size: 12px;
+  min-width: 100px;
+  padding: 10px;
+  width: auto;
+  height: auto;
+}
